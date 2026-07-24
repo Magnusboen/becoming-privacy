@@ -1,110 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Becoming — Terms of Service</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      color: #1a1a2e;
-      line-height: 1.7;
-      background: #fafafa;
-    }
-    h1 { font-size: 28px; margin-bottom: 4px; }
-    h2 { font-size: 17px; margin-top: 32px; margin-bottom: 8px; }
-    h3 { font-size: 15px; margin-top: 16px; margin-bottom: 4px; }
-    p, li { font-size: 15px; color: #444; }
-    ul { padding-left: 20px; }
-    .updated { font-size: 13px; color: #999; margin-bottom: 32px; }
-    a { color: #5b6fd6; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Becoming</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0D0F14;
+    --bg-raised: #14161D;
+    --border: #23262F;
+    --text: #E9EAEE;
+    --text-dim: #9A9DA8;
+    --accent: #7B8CDE;
+    --accent-dim: #A0AAEE;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 72px 24px 120px;
+  }
+
+  header {
+    margin-bottom: 56px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 40px;
+  }
+
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-dim);
+    margin: 0 0 16px;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 52px;
+    line-height: 1.1;
+    margin: 0 0 16px;
+    color: var(--text);
+  }
+
+  .updated {
+    color: var(--text-dim);
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .lede {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 22px;
+    color: var(--accent-dim);
+    margin: 24px 0 0;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: var(--text);
+    margin: 56px 0 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  h2 .num {
+    font-size: 15px;
+    color: var(--accent);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 28px 0 10px;
+  }
+
+  p { margin: 0 0 16px; color: var(--text); }
+
+  p, li { font-size: 15.5px; }
+
+  ul, ol { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 8px; color: var(--text); }
+  li::marker { color: var(--accent); }
+
+  a { color: var(--accent-dim); text-decoration: none; border-bottom: 1px solid rgba(160,170,238,0.35); }
+  a:hover { border-bottom-color: var(--accent-dim); }
+
+  .card {
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 0 0 16px;
+  }
+
+  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+
+  .warn {
+    border-left: 3px solid var(--accent);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 16px;
+    font-size: 14.5px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  th {
+    color: var(--text-dim);
+    font-weight: 600;
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13.5px;
+  }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 48px 20px 96px; }
+    h1 { font-size: 38px; }
+    h2 { font-size: 23px; }
+    table, thead, tbody, th, td, tr { display: block; }
+    th { padding-bottom: 0; border-bottom: none; }
+    td { border-bottom: none; padding: 4px 0; }
+    tr { padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    tr:last-child { border-bottom: none; }
+  }
+</style>
 </head>
 <body>
-  <h1>Terms of Service for Becoming</h1>
-  <p class="updated">Last updated: July 2, 2026</p>
+<div class="wrap">
 
-  <h2>1. Agreement to Terms</h2>
-  <p>By downloading, installing, or using Becoming ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App. These Terms constitute a legally binding agreement between you and Magnus Boen ("we", "us", or "our").</p>
+  <header>
+    <p class="eyebrow">Legal · Becoming</p>
+    <h1>Terms of Service</h1>
+    <p class="updated">Last updated: July 23, 2026</p>
+    <p class="lede">The agreement between you and Becoming for using the app.</p>
+  </header>
 
-  <h2>2. Description of Service</h2>
-  <p>Becoming is a personal transformation app that helps users build identity-based habits through daily check-ins, reflections, and streak tracking. The App is available on iOS devices through the Apple App Store.</p>
+  <section>
+    <h2><span class="num">01</span>Acceptance of terms</h2>
+    <p>These Terms of Service ("Terms") are an agreement between you and Magnus Bøen ("we," "us," "our"), the developer of Becoming ("the app"). By downloading, accessing, or using Becoming, you agree to be bound by these Terms and by our <a href="./">Privacy Policy</a>. If you do not agree, please do not use the app.</p>
+  </section>
 
-  <h2>3. Eligibility</h2>
-  <p>You must be at least 13 years old to use Becoming. By using the App you confirm that you meet this age requirement. If you are under 18, you confirm that you have your parent or guardian's permission to use the App.</p>
+  <section>
+    <h2><span class="num">02</span>Description of the app</h2>
+    <p>Becoming is a personal transformation and habit-tracking app that helps you define an identity, set daily wins, and reflect through daily check-ins. Becoming is a self-improvement and journaling tool. It is not a medical device, and it does not provide medical, psychological, psychiatric, or therapeutic advice, diagnosis, or treatment.</p>
+    <div class="card warn">
+      <p><strong>Not a substitute for professional care.</strong> If you are experiencing a mental health crisis, thoughts of self-harm, or a medical emergency, do not rely on this app — contact a licensed professional, local emergency services, or a crisis helpline in your area immediately. Content in the app, including reflections, quotes, and prompts, is offered for general self-development purposes only and should not be treated as professional guidance.</p>
+    </div>
+  </section>
 
-  <h2>4. Account Registration</h2>
-  <p>To use Becoming you must sign in with Apple. You are responsible for maintaining the confidentiality of your account and for all activity that occurs under your account. You agree to notify us immediately at <a href="mailto:becomingapp.contact@gmail.com">becomingapp.contact@gmail.com</a> if you become aware of any unauthorized use of your account.</p>
+  <section>
+    <h2><span class="num">03</span>Eligibility</h2>
+    <p>You must be at least 13 years old to use Becoming (or the minimum age of digital consent in your country, if higher — for example, 16 in parts of the European Economic Area). By using the app, you confirm that you meet this requirement. If you are under the age of majority in your jurisdiction, you confirm you have permission from a parent or legal guardian to use the app.</p>
+  </section>
 
-  <h2>5. Subscriptions and Payments</h2>
+  <section>
+    <h2><span class="num">04</span>Your account</h2>
+    <ul>
+      <li>You sign in using Sign in with Apple or Sign in with Google. You're responsible for maintaining the security of the account you use to sign in.</li>
+      <li>You're responsible for all activity that happens under your account.</li>
+      <li>You agree to provide accurate information and to use the app only for its intended personal, non-commercial purpose.</li>
+      <li>You may delete your account at any time from within the app's settings, which permanently deletes your associated data as described in our <a href="./">Privacy Policy</a>.</li>
+    </ul>
+  </section>
 
-  <h3>5.1 Free Trial</h3>
-  <p>Becoming offers a 7-day free trial for new users. You will not be charged during the trial period. The trial begins when you create your account.</p>
+  <section>
+    <h2><span class="num">05</span>Subscriptions &amp; payment</h2>
+    <p>Becoming offers optional premium subscriptions that unlock additional features. Current plans:</p>
+    <table>
+      <thead>
+        <tr><th>Plan</th><th>Price</th><th>Billing</th><th>Free trial</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Yearly</td><td>199 kr / year</td><td>Billed annually, upfront</td><td>7 days</td></tr>
+        <tr><td>Monthly</td><td>29 kr / month</td><td>Billed monthly</td><td>7 days</td></tr>
+      </tbody>
+    </table>
+    <p>Prices are shown in the currency of your Apple ID or Google Play account and may vary by region; the amounts above are our reference pricing and may be adjusted over time. Any price change will apply to future billing periods only, and will be communicated in accordance with Apple's or Google's platform requirements.</p>
 
-  <h3>5.2 Subscription</h3>
-  <p>After the free trial ends, continued access to Becoming requires a paid subscription. The current price is 199,- kr per year. All payments are processed through Apple's App Store and are subject to Apple's payment terms.</p>
+    <h3>Auto-renewal</h3>
+    <ul>
+      <li>Payment is charged to your Apple ID or Google Play account upon confirming your purchase.</li>
+      <li>Subscriptions automatically renew for the same length and price unless auto-renewal is turned off at least 24 hours before the end of the current period.</li>
+      <li>Your account will be charged for renewal within 24 hours prior to the end of the current period, at the price you agreed to.</li>
+      <li>Any unused portion of a free trial period is forfeited once you purchase a subscription, where applicable.</li>
+    </ul>
 
-  <h3>5.3 Billing</h3>
-  <p>Your subscription will automatically renew at the end of each billing period unless you cancel at least 24 hours before the renewal date. Apple will charge your payment method on file at confirmation of purchase and at the start of each renewal period.</p>
+    <h3>Managing or cancelling your subscription</h3>
+    <p>You can manage or cancel your subscription at any time through your Apple ID account settings (Settings → your name → Subscriptions) or your Google Play account settings (Google Play → Subscriptions), depending on where you subscribed. Cancelling stops future renewals but does not refund the current billing period.</p>
 
-  <h3>5.4 Cancellation</h3>
-  <p>You can cancel your subscription at any time through your Apple ID account settings. Cancellation takes effect at the end of the current billing period — you will continue to have access until then. We do not offer refunds for partial subscription periods.</p>
+    <h3>Refunds</h3>
+    <p>All payments are processed by Apple or Google, and refunds are governed by their respective refund policies, not by us directly. We're unable to issue refunds ourselves — please contact Apple Support or Google Play Support to request one.</p>
+  </section>
 
-  <h3>5.5 Price Changes</h3>
-  <p>We reserve the right to change our subscription price. We will give you reasonable notice of any price changes before they take effect. Your continued use of the App after a price change constitutes your acceptance of the new price.</p>
+  <section>
+    <h2><span class="num">06</span>Your content</h2>
+    <p>You retain ownership of the identity statements, reflections, check-ins, and other content you create in the app ("your content"). By using the app, you grant us a limited license to store and process your content solely for the purpose of operating the app's features for you. We do not use your content to train AI models, and we do not sell or share it with third parties for their own purposes.</p>
+  </section>
 
-  <h3>5.6 Restore Purchases</h3>
-  <p>If you have previously purchased a subscription and need to restore it on a new device, you can use the "Restore purchases" option in the App settings.</p>
+  <section>
+    <h2><span class="num">07</span>Our intellectual property</h2>
+    <p>The app itself — including its code, design, visual identity, name, logo, and the "Becoming" branding — is owned by Magnus Bøen and protected by applicable intellectual property laws. These Terms give you a personal, limited, non-transferable license to use the app; they do not transfer any ownership of the app itself to you. You may not copy, modify, distribute, sell, or reverse-engineer any part of the app outside of what these Terms expressly allow.</p>
+  </section>
 
-  <h2>6. Acceptable Use</h2>
-  <p>You agree to use Becoming only for lawful purposes and in accordance with these Terms. You agree not to:</p>
-  <ul>
-    <li>Use the App in any way that violates any applicable laws or regulations</li>
-    <li>Attempt to gain unauthorized access to any part of the App or its related systems</li>
-    <li>Reverse engineer, decompile, or disassemble any part of the App</li>
-    <li>Use the App to transmit any harmful, offensive, or disruptive content</li>
-    <li>Interfere with or disrupt the integrity or performance of the App</li>
-  </ul>
+  <section>
+    <h2><span class="num">08</span>Acceptable use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use the app for any unlawful purpose or in violation of these Terms.</li>
+      <li>Attempt to reverse-engineer, decompile, or access the app's source code or backend systems without authorization.</li>
+      <li>Interfere with or disrupt the app's infrastructure, or attempt to bypass subscription or entitlement checks.</li>
+      <li>Use automated means (bots, scrapers) to access the app.</li>
+      <li>Impersonate another person or misrepresent your affiliation.</li>
+    </ul>
+  </section>
 
-  <h2>7. Intellectual Property</h2>
-  <p>The App and all of its content, features, and functionality — including but not limited to text, graphics, logos, and software — are owned by Magnus Boen and are protected by Norwegian and international copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works from any part of the App without our express written permission.</p>
+  <section>
+    <h2><span class="num">09</span>Termination</h2>
+    <p>You may stop using the app and delete your account at any time. We may suspend or terminate your access if you violate these Terms, engage in abusive or unlawful behavior, or if required to comply with law. Upon termination, the license granted to you to use the app ends, though your right to any subscription already paid for continues to be governed by Apple's or Google's terms until it lapses or is cancelled.</p>
+  </section>
 
-  <h2>8. User Content</h2>
-  <p>Any content you enter into the App — including your identity statement, why statement, daily wins, and reflections — remains your own. We do not claim ownership of your personal content. By using the App you grant us a limited license to store and process your content solely for the purpose of providing the service to you.</p>
+  <section>
+    <h2><span class="num">10</span>Disclaimer of warranties</h2>
+    <div class="card">
+      <p>The app is provided "as is" and "as available," without warranties of any kind, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not warrant that the app will be uninterrupted, error-free, or completely secure, or that any outcomes, insights, or personal growth will result from using it.</p>
+    </div>
+  </section>
 
-  <h2>9. Privacy</h2>
-  <p>Your use of Becoming is also governed by our Privacy Policy, which is incorporated into these Terms by reference. Please review our Privacy Policy at <a href="https://magnusboen.github.io/becoming-privacy">magnusboen.github.io/becoming-privacy</a> to understand our practices regarding your personal data.</p>
+  <section>
+    <h2><span class="num">11</span>Limitation of liability</h2>
+    <p>To the maximum extent permitted by applicable law, Magnus Bøen shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of data, profits, or goodwill, arising out of or related to your use of, or inability to use, the app — even if advised of the possibility of such damages. Where liability cannot be excluded under applicable law (including certain consumer-protection laws in Norway or the EEA), our liability is limited to the amount you paid for your subscription in the twelve months preceding the claim, or 500 NOK, whichever is greater.</p>
+    <p>Nothing in these Terms excludes or limits liability that cannot be excluded or limited under applicable law, including liability for death or personal injury caused by negligence, or fraud.</p>
+  </section>
 
-  <h2>10. Disclaimers</h2>
-  <p>Becoming is provided "as is" and "as available" without warranties of any kind, either express or implied. We do not warrant that the App will be uninterrupted, error-free, or free of viruses or other harmful components. The App is intended for personal development and motivational purposes only and is not a substitute for professional medical, psychological, or therapeutic advice.</p>
+  <section>
+    <h2><span class="num">12</span>Indemnification</h2>
+    <p>You agree to indemnify and hold harmless Magnus Bøen from any claims, damages, losses, or expenses (including reasonable legal fees) arising out of: your violation of these Terms, your misuse of the app, or your violation of any law or third-party right through your use of the app. This does not apply to claims arising from our own breach of these Terms or violation of law.</p>
+  </section>
 
-  <h2>11. Limitation of Liability</h2>
-  <p>To the maximum extent permitted by applicable law, Magnus Boen shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the App, even if we have been advised of the possibility of such damages. Our total liability to you for any claims arising from these Terms or your use of the App shall not exceed the amount you paid us in the 12 months preceding the claim.</p>
+  <section>
+    <h2><span class="num">13</span>General provisions</h2>
+    <ul>
+      <li><strong>Severability</strong> — if any provision of these Terms is found unenforceable, the remaining provisions continue in full effect.</li>
+      <li><strong>Entire agreement</strong> — these Terms, together with our Privacy Policy, constitute the entire agreement between you and us regarding the app, and supersede any prior agreements on the subject.</li>
+      <li><strong>No waiver</strong> — our failure to enforce any provision of these Terms at any time doesn't waive our right to enforce it later.</li>
+      <li><strong>Assignment</strong> — we may assign or transfer these Terms, for example as part of a merger, acquisition, or sale of assets. You may not assign your rights under these Terms without our consent.</li>
+      <li><strong>Force majeure</strong> — we're not liable for any delay or failure to perform resulting from causes outside our reasonable control, including outages of third-party services we rely on (such as Supabase, Apple, Google, RevenueCat, or Expo), natural disasters, or acts of government.</li>
+    </ul>
+  </section>
 
-  <h2>12. Indemnification</h2>
-  <p>You agree to indemnify and hold harmless Magnus Boen from any claims, losses, damages, liabilities, costs, and expenses (including reasonable legal fees) arising from your use of the App or violation of these Terms.</p>
+  <section>
+    <h2><span class="num">14</span>Apple App Store &amp; Google Play terms</h2>
+    <p>If you downloaded Becoming from the Apple App Store, the following additional terms apply and take precedence over any conflicting term in this section:</p>
+    <ul>
+      <li>These Terms are between you and us only, not Apple, and Apple is not responsible for the app or its content.</li>
+      <li>Apple has no obligation to furnish any maintenance or support services for the app.</li>
+      <li>In the event of any failure of the app to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price (if any) for the app to you; to the maximum extent permitted by law, Apple has no other warranty obligation with respect to the app.</li>
+      <li>Apple is not responsible for addressing any claims relating to the app, including product liability claims, legal or regulatory compliance claims, or claims under consumer protection law.</li>
+      <li>Apple is not responsible for the investigation, defense, settlement, or discharge of any third-party claim that the app infringes intellectual property rights.</li>
+      <li>You confirm that you are not located in a country subject to a U.S. government embargo, and are not on any U.S. government list of prohibited or restricted parties.</li>
+      <li>Apple, and its subsidiaries, are third-party beneficiaries of these Terms, and upon your acceptance, Apple has the right to enforce these Terms against you as a third-party beneficiary.</li>
+    </ul>
+    <p>If you downloaded Becoming from Google Play, your use of the app is also subject to the Google Play Terms of Service.</p>
+  </section>
 
-  <h2>13. Changes to Terms</h2>
-  <p>We reserve the right to modify these Terms at any time. We will notify you of significant changes through the App or by email. Your continued use of the App after changes take effect constitutes your acceptance of the revised Terms. If you do not agree to the revised Terms you must stop using the App.</p>
+  <section>
+    <h2><span class="num">15</span>Changes to these terms</h2>
+    <p>We may update these Terms from time to time to reflect changes to the app or applicable law. We'll notify you of any significant changes through the app. Continuing to use Becoming after changes take effect means you accept the updated Terms.</p>
+  </section>
 
-  <h2>14. Termination</h2>
-  <p>We reserve the right to suspend or terminate your access to the App at any time, with or without notice, for conduct that we believe violates these Terms or is harmful to other users, us, or third parties, or for any other reason at our sole discretion.</p>
+  <section>
+    <h2><span class="num">16</span>Governing law &amp; disputes</h2>
+    <p>These Terms are governed by the laws of Norway, without regard to its conflict-of-law provisions. If you are a consumer resident in the European Economic Area, you may also be entitled to rely on mandatory consumer-protection provisions of the law of your country of residence. Any dispute arising from these Terms or your use of the app shall first be attempted to be resolved informally by contacting us at the email below; if unresolved, disputes shall be subject to the exclusive jurisdiction of the courts of Norway, except where mandatory consumer law provides otherwise.</p>
+  </section>
 
-  <h2>15. Governing Law</h2>
-  <p>These Terms shall be governed by and construed in accordance with the laws of Norway, without regard to its conflict of law provisions. Any disputes arising from these Terms or your use of the App shall be subject to the exclusive jurisdiction of the courts of Norway.</p>
+  <section>
+    <h2><span class="num">17</span>Contact</h2>
+    <div class="card">
+      <p>Questions about these Terms can be sent to <a href="mailto:becomingapp.contact@gmail.com">becomingapp.contact@gmail.com</a>.</p>
+    </div>
+  </section>
 
-  <h2>16. Apple App Store Terms</h2>
-  <p>You acknowledge that these Terms are between you and Magnus Boen only, and not with Apple Inc. Apple is not responsible for the App or its content. In the event of any conflict between these Terms and Apple's App Store terms, Apple's terms shall prevail with respect to App Store specific matters.</p>
+  <footer>
+    <p>Becoming · Developed by Magnus Bøen, Norway · <a href="./">Privacy Policy</a></p>
+  </footer>
 
-  <h2>17. Contact</h2>
-  <p>If you have any questions about these Terms, please contact us at: <a href="mailto:becomingapp.contact@gmail.com">becomingapp.contact@gmail.com</a></p>
-
-  <br>
-  <p style="font-size: 13px; color: #999; margin-top: 40px;">
-    <a href="https://magnusboen.github.io/becoming-privacy">← Privacy Policy</a>
-  </p>
+</div>
 </body>
 </html>
