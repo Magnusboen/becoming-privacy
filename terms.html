@@ -170,11 +170,31 @@
     .wrap { padding: 48px 20px 96px; }
     h1 { font-size: 38px; }
     h2 { font-size: 23px; }
-    table, thead, tbody, th, td, tr { display: block; }
-    th { padding-bottom: 0; border-bottom: none; }
-    td { border-bottom: none; padding: 4px 0; }
-    tr { padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+
+    table, tbody, tr, td { display: block; width: 100%; }
+    thead { display: none; }
+
+    tr {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
     tr:last-child { border-bottom: none; }
+
+    td {
+      border-bottom: none;
+      padding: 3px 0;
+    }
+
+    td[data-label]::before {
+      content: attr(data-label);
+      display: block;
+      font-size: 11.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-dim);
+      margin-bottom: 2px;
+    }
   }
 </style>
 </head>
@@ -224,8 +244,8 @@
         <tr><th>Plan</th><th>Price</th><th>Billing</th><th>Free trial</th></tr>
       </thead>
       <tbody>
-        <tr><td>Yearly</td><td>199 kr / year</td><td>Billed annually, upfront</td><td>7 days</td></tr>
-        <tr><td>Monthly</td><td>29 kr / month</td><td>Billed monthly</td><td>7 days</td></tr>
+        <tr><td data-label="Plan">Yearly</td><td data-label="Price">199 kr / year</td><td data-label="Billing">Billed annually, upfront</td><td data-label="Free trial">7 days</td></tr>
+        <tr><td data-label="Plan">Monthly</td><td data-label="Price">29 kr / month</td><td data-label="Billing">Billed monthly</td><td data-label="Free trial">7 days</td></tr>
       </tbody>
     </table>
     <p>Prices are shown in the currency of your Apple ID or Google Play account and may vary by region; the amounts above are our reference pricing and may be adjusted over time. Any price change will apply to future billing periods only, and will be communicated in accordance with Apple's or Google's platform requirements.</p>
