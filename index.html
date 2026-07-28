@@ -166,11 +166,31 @@
     .wrap { padding: 48px 20px 96px; }
     h1 { font-size: 38px; }
     h2 { font-size: 23px; }
-    table, thead, tbody, th, td, tr { display: block; }
-    th { padding-bottom: 0; border-bottom: none; }
-    td { border-bottom: none; padding: 4px 0; }
-    tr { padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+
+    table, tbody, tr, td { display: block; width: 100%; }
+    thead { display: none; }
+
+    tr {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
     tr:last-child { border-bottom: none; }
+
+    td {
+      border-bottom: none;
+      padding: 3px 0;
+    }
+
+    td[data-label]::before {
+      content: attr(data-label);
+      display: block;
+      font-size: 11.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-dim);
+      margin-bottom: 2px;
+    }
   }
 </style>
 </head>
@@ -232,12 +252,12 @@
         <tr><th>Service</th><th>Purpose</th><th>Policy</th></tr>
       </thead>
       <tbody>
-        <tr><td>Supabase</td><td>Database, authentication, account storage</td><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></td></tr>
-        <tr><td>Apple Sign In</td><td>Authentication</td><td><a href="https://www.apple.com/legal/privacy" target="_blank" rel="noopener">apple.com/legal/privacy</a></td></tr>
-        <tr><td>Google Sign In</td><td>Authentication</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
-        <tr><td>RevenueCat</td><td>Subscription and entitlement management</td><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></td></tr>
-        <tr><td>Apple App Store / Google Play</td><td>Payment processing for subscriptions</td><td><a href="https://www.apple.com/legal/privacy" target="_blank" rel="noopener">apple.com/legal/privacy</a></td></tr>
-        <tr><td>Expo</td><td>App build and push notification delivery</td><td><a href="https://expo.dev/privacy" target="_blank" rel="noopener">expo.dev/privacy</a></td></tr>
+        <tr><td data-label="Service">Supabase</td><td data-label="Purpose">Database, authentication, account storage</td><td data-label="Policy"><a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></td></tr>
+        <tr><td data-label="Service">Apple Sign In</td><td data-label="Purpose">Authentication</td><td data-label="Policy"><a href="https://www.apple.com/legal/privacy" target="_blank" rel="noopener">apple.com/legal/privacy</a></td></tr>
+        <tr><td data-label="Service">Google Sign In</td><td data-label="Purpose">Authentication</td><td data-label="Policy"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
+        <tr><td data-label="Service">RevenueCat</td><td data-label="Purpose">Subscription and entitlement management</td><td data-label="Policy"><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></td></tr>
+        <tr><td data-label="Service">Apple App Store / Google Play</td><td data-label="Purpose">Payment processing for subscriptions</td><td data-label="Policy"><a href="https://www.apple.com/legal/privacy" target="_blank" rel="noopener">apple.com/legal/privacy</a></td></tr>
+        <tr><td data-label="Service">Expo</td><td data-label="Purpose">App build and push notification delivery</td><td data-label="Policy"><a href="https://expo.dev/privacy" target="_blank" rel="noopener">expo.dev/privacy</a></td></tr>
       </tbody>
     </table>
     <p>Some of these providers may process data on servers located outside Norway and the European Economic Area, including in the United States. Where this happens, we rely on the safeguards these providers offer — such as Standard Contractual Clauses — to ensure your data remains protected to an equivalent standard.</p>
